@@ -51,7 +51,7 @@ export const TransactionList=()=>{
             <table>
 
                     {
-                        transactions.length == 0 &&
+                        transactions.length === 0 &&
                             <span> NO TRANSACTIONS YET!</span>
                     }
 
