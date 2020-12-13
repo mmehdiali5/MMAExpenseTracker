@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Header} from './components/Header'
+import {Balance} from './components/Balance'
+import {IncomeExpenses} from './components/incomeExpenses'
+import {TransactionList} from './components/TransactionList'
+import {AddTransaction} from './components/AddTransaction'
+import {GlobalProvider} from "./context/GlobalState";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return(
+        <GlobalProvider>
+<div className="container">
+    <div className="col-3" style={{paddingLeft:"10%"}}></div>
+                <Header/>
+                <Balance/>
+                <IncomeExpenses/>
+                <TransactionList/>
+                <AddTransaction/>
+    <div className="col-4"></div>
+</div>
+        </GlobalProvider>
+    )
+
 }
 
 export default App;
