@@ -48,7 +48,7 @@ export const TransactionList=()=>{
 
         <React.Fragment>
             <h3>Transaction History</h3>
-            <table>
+            
 
                     {
                         transactions.length === 0 &&
@@ -82,7 +82,7 @@ export const TransactionList=()=>{
                         }
                     })
                 }
-            </table>
+            
         </React.Fragment>
     )
 }
