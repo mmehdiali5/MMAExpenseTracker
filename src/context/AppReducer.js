@@ -1,10 +1,10 @@
-export default(state,action)=>{
+function AppReducer(state,action){
     switch (action.type){
         case 'Delete':
             let clone=[]
             let count=0;
             for(let i=0;i<state.transactions.length;i++){
-                if(state.transactions[i].id!=action.payload){
+                if(state.transactions[i].id!==action.payload){
                     clone.push(state.transactions[i]);
                     state.transactions[i].id=count;
                     count++
@@ -26,3 +26,5 @@ export default(state,action)=>{
             return state;
     }
 }
+
+export default AppReducer
