@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Header} from './components/Header'
 import {Balance} from './components/Balance'
