@@ -59,7 +59,7 @@ export const TransactionList=()=>{
                         transactions.map((t,index)=>{
                         if(t.amount<0) {
                             return (
-                                <div style={styleRed}>
+                                <div key={index} style={styleRed}>
                                     <span>{t.text}</span>
                                     <span style={{marginLeft:"20px"}}>${t.amount}
 
@@ -71,7 +71,7 @@ export const TransactionList=()=>{
                             )
                         }else{
                             return (
-                                <div style={styleGreen}>
+                                <div key={index} style={styleGreen}>
                                     <span>{t.text}</span>
                                     <span style={{marginLeft:"20px"}}>${t.amount}
                                         <span style={greenBtnStyle} id={index} onClick={()=>deleteTransaction(t.id)}>X
